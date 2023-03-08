@@ -3,20 +3,14 @@
 <head>
 <title>Visualiseur cartographique des données d'émissions de CO2 (base IREP)</title>
 <meta name="author" content="BRGM" />
-<meta name="description" content="Profondeur des nappes d'eau en France" />
-<meta name="keywords" content="eau, eau souterraine, chronique, évolution, quantité, hauteur, niveau, côte, NGF, sécheresse, inondation, nappe, aquifère, Hub'Eau, HubEau, France" />
+<meta name="description" content="Emissions industrielles de CO2 en France" />
+<meta name="keywords" content="émission, polluant, chronique, évolution, quantité, CO2, dioxyde de carbone, Géorisques, France" />
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="fr" />
-<!-- <link rel="stylesheet" type="text/css" href="css/stylehtm_piezo.css" media="all" /> -->
 <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-<!-- <link rel="stylesheet" href="css/odometer-theme-car-piezo.css" /> -->
 <link rel="stylesheet" href="css/odometer-theme-car-hydro.css" />
 <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-<!-- si on veut ajouter le "m" dans le conteneur du compteur
-.odometer .odometer-inside:after {
-    content: "m"
-} !-->
 <script type="text/javascript" src="js/odometer-prel.js"></script>
 <!--
 <script>
@@ -131,7 +125,6 @@
 	</form>
 	
 	<h3>Emissions de CO2</h3>
-	<!-- <div id="odometer" class="odometer" style="font-size: 80px; font-family: tt_normsmedium;><p>000</p><p><img src="images/Vagues.svg"></p></div> -->
 	<div id="odometer" class="odometer" style="font-size: 42px;" ><p>000</p><p><img src="images/Vagues.svg"></p></div>
 	<span class="metres">&nbsp;kg/an&nbsp;</span>
     <div id="vagues"><img src="images/Vagues.svg"></div>
@@ -165,9 +158,9 @@
 	<div id="bton_pp" title="Toute l'étendue">Toute l'étendue</div>
 <div id="aide" title="Aide"></div>
 <div id="fen_aide" title="Fenêtre d'aide">
-<p>Cliquer sur une station de mesure (piézomètre) pour connaître la profondeur de l'eau de la nappe à cet endroit.</p>
-<p>Ce service utilise les opérations stations et chroniques de <a href="https://hubeau.eaufrance.fr/page/api-piezometrie" target="_blank">l'API Piézométrie</a> de <a href="https://hubeau.eaufrance.fr" target="_blank">Hub'Eau</a>, qui diffuse les données de <a href="https://ades.eaufrance.fr/">ADES</a>.</p>
-<p><a href="aide/chroniques_aide.htm" target="_blank">En savoir plus...</a></p>
+<p>Cliquer sur un établissement industriel pour connaître ses émissions annuelles de dioxyde de carbone (CO2).</p>
+<p>Ce service utilise les données <a href="https://georisques.gouv.fr/risques/registre-des-emissions-polluantes" target="_blank">IREP (Registre national des Emissions Polluantes)</a> exposées par <a href="https://georisques.gouv.fr/installations-industrielles-rejetant-des-polluants" target="_blank">Géorisques</a>.</p>
+<p><a href="aide/irep_aide.htm" target="_blank">En savoir plus...</a></p>
 </div>
 <div id="etat" name="etat">
 </div>
@@ -194,7 +187,7 @@
  g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
  })();
  </script>
- <noscript><p><img src="https://wwwstats.brgm.fr/piwik.php?idsite=121" style="border:0;" alt="" /></p></noscript>
+ <noscript><p><img src="https://wwwstats.brgm.fr/piwik.php?idsite=82" style="border:0;" alt="" /></p></noscript>
  <!-- End Piwik Code -->
 
 </body>
