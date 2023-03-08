@@ -1,0 +1,85 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr" >
+<head>
+<title>Aide pour le visualiseur cartographique des données d'émissions de CO2</title>
+<meta name="author" content="BRGM" />
+<meta name="description" content="Emissions industrielles de CO2 en France" />
+<meta name="keywords" content="émission, polluant, chronique, évolution, quantité, CO2, dioxyde de carbone, Géorisques, France" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="fr" />
+<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+<style>
+#aide img { 
+vertical-align:middle; }
+</style>
+</head>
+<body>
+<div id="aide">
+<h2>Guide d'utilisation du visualiseur des données d'émissions de CO2</h2>
+<p>&nbsp;</p>
+
+<h3>Localisation</h3>
+<p>Dans la zone d'adresse <img src="images/input_adresse.png" align=middle height="48">, entrez une adresse complète ou simplement un nom de commune puis appuyez sur la touche Entrée du clavier
+ ou cliquez sur la petite loupe <img src="../images/magnifying-glass.png" align=middle> à droite. <br/>Ou déplacez-vous simplement sur la carte et zoomez/dézoomez
+ à l'aide des boutons <img src="images/bouton_plus.png" align=middle> et <img src="images/bouton_moins.png" align=middle> ou de la molette de la souris.
+ Il est possible également de déplacer le rectangle bleu sur la mini-carte <img src="images/mini_carte.png" align=middle> en haut à droite.</p>
+<p>Le fonds de carte peut être changé en passant la souris sur l'icône <img src="images/logo_openlayers70.png" height="32" align=middle></p>
+<p>Un click sur le bouton <img src="images/bouton_france_metro.png" height="32" align=middle> permet de recentrer la carte sur la France métropolitaine.
+ Un click sur le bouton <img src="images/bouton_toute_etendue.png" height="32" align=middle> centre la carte sur l'ensemble des ouvrages de prélèvement disponibles.</p>
+
+<p>&nbsp;</p>
+<h3>Visualisation des données</h3>
+<p>Cliquez sur un établissement pour afficher la dernière valeur annuelle de quantité de CO2 rejeté connue ainsi que sa courbe d'évolution. Si la dernière quantité annuelle est supérieure à 999 999 999 kg/an, le compteur sera bloqué à cette valeur.</p>
+<p>Les chiffres présentés représentent le cumul des émissions de dioxyde de carbone (CO2) de toutes origines (biomasse et hors biomasse). Les quantités sont exprimées en kg.</p>
+<p><img src="images/graphique_irep.png" height="400" align=middle></p>
+<p>En passant la souris sur un établissement, une infobulle indique le code, le nom, le code activité (NAF), le nombre de mesures annuelles disponibles, la période de mesure et la quantité annuelle maximale émise par cet établissement au cours de la période de mesure. <img src="images/infobulle_irep.png" align=middle></p>
+<p>Les données sont issues du <a href="https://georisques.gouv.fr/risques/registre-des-emissions-polluantes" target="_blank">Registre national des Emissions Polluantes (IREP)</a> exposées par <a href="https://georisques.gouv.fr/installations-industrielles-rejetant-des-polluants" target="_blank">Géorisques</a>.</p>
+<p>L'histogramme d'évolution des émissions de CO2 s'affiche si la résolution de l'écran est suffisante. Il présente l'ensemble des mesures disponibles pour l'établissement considéré.</p>
+<p>Dans la fenêtre du graphique, le bouton <img src="images/bouton_tout.png" align=middle> en haut à gauche permet de changer la période d'affichage.
+ Le bouton <img src="images/bouton_options_graphique.png" align=middle> en haut à droite de la fenêtre permet d'afficher le graphique en plein écran, d'imprimer le graphique, de télécharger le graphique sous forme d'image et enfin de télécharger ou visualiser les données.</p>
+<p>Passez la souris sur l'histogramme des quantités pour afficher une infobulle avec l'année et la quantité émise.</p>
+<p>S'il y a assez de place à l'écran, un sélecteur <img src="images/graphique_selecteur.png" align=middle> présent en bas de la fenêtre permet de changer l'échelle de l'axe des temps.<p> 
+<p>Accédez à la fiche Géorisques de l'établissement industriel sélectionné en cliquant sur <img src="images/lien_plus_infos_etab.png" align=middle>.</p>
+<p>&nbsp;</p>
+<h3>Aide en ligne</h3>
+<p>Un click sur le bouton <img src="images/bouton_aide.png" height="32" align=middle> en bas à droite affiche une fenêtre d'aide.</p>
+<p>&nbsp;</p>
+<h3>Légende</h3>
+<p>En dessous de la carte, une ligne de légende indique le nombre d'établissements disponibles.<br><br>
+<img src="images/legende_irep.png" align=middle><br><br>
+<p>La ligne de légende permet de filtrer l'affichage des établissements selon 4 critères :
+<ul>
+<li>nbobsmin - nombre minimal de mesures : affichage uniquement des établissements ayant au moins nbobsmin mesures</li>
+<li>datedeb - date de début des mesures (format AAAA-MM-JJ ou AAAA-MM ou AAAA) : affichage uniquement des établissements ayant des mesures antérieures à datedeb</li>
+<li>datefin - date de fin des mesures (format AAAA-MM-JJ ou AAAA-MM ou AAAA) : affichage uniquement des établissements ayant des mesures postérieures à datefin</li>
+<li>seuil - seuil d'émission : affichage uniquement des établissements dont au moins une des émissions annuelle est supérieure à seuil (en kg).</li></ul>
+Le nombre d'établissements affiché reflète en permanence le nombre d'établissements répondant aux critères choisis par l'utilisateur.</p>	
+<p>&nbsp;</p>
+<h3>Paramètres</h3>
+<p>Des paramètres peuvent être passés directement dans l'URL : code_station (code de l'établissement), coord (longitude, latitude), adresse, fdp (fond de plan) ainsi que les 4 paramètres décrits ci-dessus : nbobsmin, datedeb, datefin, seuil.<br>
+<ul>
+<li><i>code_station</i> permet de zoomer la carte sur l'établissement en question et de le sélectionner pour affichage de la courbe d'évolution des volumes prélevés.</li>
+<li><i>coord</i>=long,lat permet de zoomer la carte aux coordonnées (long,lat)</li>
+<li><i>adresse</i> permet de zoomer la carte à l'adresse indiquée (comme quand l'utilisateur saisit une adresse dans l'interface). Pour le zoom, code station est prioritaire sur coord qui est prioritaire sur adresse.</li>
+<li><i>fdp</i> permet de choisir le fond de plan. Les fonds de plan disponibles sont fdp=1 : OSM standard ; fdp=2 : JAWG terrain ; fdp=3 : ESRI topo ; fdp = 4 : Stadia Bright ; fdp = 5 : IGN plan v2 ; fdp=6 : IGN BD Ortho ; fdp = 7 : BRGM géologie.
+ Le fond de plan Stadia Bright (4) est actuellement indisponible. En cas d'absence du paramètre fdp,le fond de plan par défaut est ESRI topo.</li>
+<li><i>nbobsmin</i> permet d'afficher uniquement les établissements ayant au moins nbobsmin mesures</li>
+<li><i>datedeb</i> (format AAAA-MM-JJ ou AAAA-MM ou AAAA) : permet d'afficher uniquement les établissements ayant des mesures antérieures à datedeb</li>
+<li><i>datefin</i> (format AAAA-MM-JJ ou AAAA-MM ou AAAA) : permet d'afficher uniquement les établissements ayant des mesures postérieures à datefin</li>
+<li><i>seuil</i> permet de n'afficher que les établissements dont au moins une des émissions annuelle est supérieure à seuil (en kg).</li>
+</ul>
+Par exemple :
+<ul>
+<li><a href="https://tvilmus.github.io/risques/irep.htm?code_station=0010001733&fdp=5" target="_blank">https://tvilmus.github.io/risques/irep.htm?code_station=0010001733&fdp=5</a> affiche les établissements prélevant dans les milieux continental ou littoral sur l'ouvrage de code BSS OPR0000008667 avec le fond de plan IGN plan v2.</li>
+<li><a href="https://tvilmus.github.io/risques/irep.htm?coord=5,49&fdp=1" target="_blank">https://tvilmus.github.io/risques/irep.htm?coord=5,49&fdp=1</a> zoome la carte sur le point de 5° de longitude et 49° de latitude avec le fond de plan OSM standard.</li>
+<li><a href="https://tvilmus.github.io/risques/irep.htm?adresse=36 rue henri poincaré nancy" target="_blank">https://tvilmus.github.io/risques/irep.htm?adresse=36 rue henri poincaré nancy</a> zoome la carte sur l'adresse mentionnée.</li>
+<li><a href="https://tvilmus.github.io/risques/irep.htm?nbobsmin=15" target="_blank">https://tvilmus.github.io/risques/irep.htm?nbobsmin=15</a> affiche les établissements disposant d'au moins 15 années de mesure.</li>
+<li><a href="https://tvilmus.github.io/risques/irep.htm?datedeb=2003" target="_blank">https://tvilmus.github.io/risques/irep.htm?datedeb=2003</a> affiche les établissements disposant de mesures avant le 1er janvier 2003 (donc pour les années 2002 et antérieures).</li>
+<li><a href="https://tvilmus.github.io/risques/irep.htm?datefin=2021" target="_blank">https://tvilmus.github.io/risques/irep.htm?datefin=2021</a> affiche les établissements disposant de mesures après le 1er janvier 2021 (donc pour les années 2021 et postérieures).</li>
+<li><a href="https://tvilmus.github.io/risques/irep.htm?nbobsmin=15&datedeb=2003&datefin=2021" target="_blank">https://tvilmus.github.io/risques/irep.htm?nbobsmin=15&datedeb=2003&datefin=2021</a> affiche les établissements disposant d'au moins 15 mesures d'émissions annuelles, dont des mesures avant l'an 2003 et à partir de 2021.</li>
+<li><a href="https://tvilmus.github.io/risques/irep.htm?seuil=100000000" target="_blank">https://tvilmus.github.io/risques/irep.htm?seuil=100000000</a> affiche les établissements ayant dépassé 100 millions de kg/an de CO2 émis au moins une fois au cours de l'historique.</li>
+</ul>
+</p>
+</div>
+</body>
+</html>
