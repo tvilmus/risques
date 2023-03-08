@@ -32,7 +32,6 @@ vertical-align:middle; }
 <p>Cliquez sur un établissement pour afficher la dernière valeur annuelle de quantité de CO2 rejeté connue ainsi que sa courbe d'évolution. Si la dernière quantité annuelle est supérieure à 999 999 999 kg/an, le compteur sera bloqué à cette valeur.</p>
 <p>Les chiffres présentés représentent le cumul des émissions de dioxyde de carbone (CO2) de toutes origines (biomasse et hors biomasse). Les quantités sont exprimées en kg.</p>
 <p><img src="images/graphique_irep.png" height="400" align=middle></p>
-<p>En passant la souris sur un établissement, une infobulle indique le code, le nom, le code activité (NAF), le nombre de mesures annuelles disponibles, la période de mesure et la quantité annuelle maximale émise par cet établissement au cours de la période de mesure. <img src="images/infobulle_irep.png" align=middle></p>
 <p>Les données sont issues du <a href="https://georisques.gouv.fr/risques/registre-des-emissions-polluantes" target="_blank">Registre national des Emissions Polluantes (IREP)</a> exposées par <a href="https://georisques.gouv.fr/installations-industrielles-rejetant-des-polluants" target="_blank">Géorisques</a>.</p>
 <p>L'histogramme d'évolution des émissions de CO2 s'affiche si la résolution de l'écran est suffisante. Il présente l'ensemble des mesures disponibles pour l'établissement considéré.</p>
 <p>Dans la fenêtre du graphique, le bouton <img src="images/bouton_tout.png" align=middle> en haut à gauche permet de changer la période d'affichage.
@@ -40,9 +39,10 @@ vertical-align:middle; }
 <p>Passez la souris sur l'histogramme des quantités pour afficher une infobulle avec l'année et la quantité émise.</p>
 <p>S'il y a assez de place à l'écran, un sélecteur <img src="images/graphique_selecteur.png" align=middle> présent en bas de la fenêtre permet de changer l'échelle de l'axe des temps.<p> 
 <p>Accédez à la fiche Géorisques de l'établissement industriel sélectionné en cliquant sur <img src="images/lien_plus_infos_etab.png" align=middle>.</p>
+<p>Dans la fenêtre de la carte, passez la souris sur un établissement pour afficher une infobulle indiquant le code, le nom, le code activité (NAF), le nombre de mesures annuelles disponibles, la période de mesure et la quantité annuelle maximale émise par cet établissement au cours de la période de mesure. <img src="images/infobulle_irep.png" align=middle></p>
 <p>&nbsp;</p>
 <h3>Aide en ligne</h3>
-<p>Un click sur le bouton <img src="images/bouton_aide.png" height="32" align=middle> en bas à droite affiche une fenêtre d'aide.</p>
+<p>Un click sur le bouton <img src="images/bouton_aide.png" height="32" align=middle> en bas à droite de l'écran affiche une fenêtre d'aide.</p>
 <p>&nbsp;</p>
 <h3>Légende</h3>
 <p>En dessous de la carte, une ligne de légende indique le nombre d'établissements disponibles.<br><br>
@@ -55,7 +55,7 @@ vertical-align:middle; }
 <li>seuil - seuil d'émission : affichage uniquement des établissements dont au moins une des émissions annuelle est supérieure à seuil (en kg).</li></ul>
 Le nombre d'établissements affiché reflète en permanence le nombre d'établissements répondant aux critères choisis par l'utilisateur.</p>	
 <p>&nbsp;</p>
-<h3>Paramètres</h3>
+<h3>Paramètres optionnels</h3>
 <p>Des paramètres peuvent être passés directement dans l'URL : code_station (code de l'établissement), coord (longitude, latitude), adresse, fdp (fond de plan) ainsi que les 4 paramètres décrits ci-dessus : nbobsmin, datedeb, datefin, seuil.<br>
 <ul>
 <li><i>code_station</i> permet de zoomer la carte sur l'établissement en question et de le sélectionner pour affichage de la courbe d'évolution des volumes prélevés.</li>
@@ -79,6 +79,7 @@ Par exemple :
 <li><a href="https://tvilmus.github.io/risques/irep.htm?nbobsmin=15&datedeb=2003&datefin=2021" target="_blank">https://tvilmus.github.io/risques/irep.htm?nbobsmin=15&datedeb=2003&datefin=2021</a> affiche les établissements disposant d'au moins 15 mesures d'émissions annuelles, dont des mesures avant l'an 2003 et à partir de 2021.</li>
 <li><a href="https://tvilmus.github.io/risques/irep.htm?seuil=100000000" target="_blank">https://tvilmus.github.io/risques/irep.htm?seuil=100000000</a> affiche les établissements ayant dépassé 100 millions de kg/an de CO2 émis au moins une fois au cours de l'historique.</li>
 </ul>
+Les requêtes se construisent en mettant le caractère '?' entre 'irep.htm' et le premier paramètre, puis en séparant les éventuels paramètres suivants avec le caractère '&'.
 </p>
 </div>
 </body>
