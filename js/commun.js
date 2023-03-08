@@ -264,7 +264,7 @@ function graphique(stitle, sytitle, sttformat, ttnbdec, sttunit, blegend=false, 
 				pointPadding: 0.2,
 				borderWidth: 0,
 				groupPadding: 0,
-				color: '#0000FF',
+				color: '#A10808',
 				shadow: false
 			},
 			scatter: {
@@ -294,16 +294,6 @@ function graphique(stitle, sytitle, sttformat, ttnbdec, sttunit, blegend=false, 
 							return '<u>' + this.series.name + '</u><br>le '+ Highcharts.dateFormat(sttformat, this.x) +' : <b>'+ Highcharts.numberFormat(this.y,ttnbdec,'.',' ') +'</b> ' + sttunit; 
 						}	
 				};	
-				/*	
-				if (grandeur == 'QmM') {
-					return Highcharts.dateFormat('%b %Y', this.x+86400000) +' : <b>'+ Highcharts.numberFormat(this.y,2,'.',' ') +'</b> m3/s'; // 86400000 pour ajouter 1 jour et afficher le bon mois
-				} else {	
-					if (ttnbdec == -1) {
-						return '<u>' + this.series.name + '</u><br>le '+ Highcharts.dateFormat(sttformat, this.x) +' : <b>'+ this.y +'</b> ' + sttunit; 
-					} else {	
-						return '<u>' + this.series.name + '</u><br>le '+ Highcharts.dateFormat(sttformat, this.x) +' : <b>'+ Highcharts.numberFormat(this.y,ttnbdec,'.',' ') +'</b> ' + sttunit; 
-					}	
-				} */	
 			},
 			shared: false //true
 			//xDateFormat: '%Y-%m-%d',
@@ -326,6 +316,10 @@ function graphique(stitle, sytitle, sttformat, ttnbdec, sttunit, blegend=false, 
 		},
         navigator: {
 			//maskFill: 'rgba(0, 127, 255, 0.75)',
+			series: {
+				color: '#A10808',
+				lineWidth: 1
+			},
 			margin: 10,
 			height: 30,
 			enabled: bnav
@@ -391,6 +385,7 @@ function graphique(stitle, sytitle, sttformat, ttnbdec, sttunit, blegend=false, 
 				name: bss,
 				colorIndex: coul,
 				yAxis: 0,
+				/*
 				fillColor: {
 					linearGradient: {
 						x1: 0,
@@ -405,6 +400,7 @@ function graphique(stitle, sytitle, sttformat, ttnbdec, sttunit, blegend=false, 
 						//[1, '#FFFFFF']
 					]
 				},
+				*/
 				data: processed_json
 		}]
 	});

@@ -53,15 +53,11 @@ function donnees_piezo(bss) {
 				nbmes = 0;
 				for(var key in jsondata) {
 					nbmes++;
-					//an = jsondata[key]['anneeemission'];
-					//niv = jsondata[key]['max']; 
 					an = key;
 					dat = Date.parse(an); // on garde une date en X pour être compatible avec les graphiques des autres démonstrateurs
 					niv = jsondata[key]; 
 					processed_json.push([dat, niv]);
-					//console.log("dat="+dat+"  niv="+niv);
 				}
-				//console.table(processed_json);
 				processed_json.sort(function(a,b) { // ajout 2021-08-04 pour ne plus avoir le warning https://assets.highcharts.com/errors/15/ et avoir le navigator correct
 					return a[0]-b[0]
 				});
@@ -70,13 +66,13 @@ function donnees_piezo(bss) {
 				if (dernier_resultat < 0) { dernier_resultat = 0; } // 2021-08-25 pour prendre en compte piézos artésiens (copié de piezo_tr.js)
 				delayedAlert(Math.round(dernier_resultat)); // // pas de chiffre après la virgule, plus de dernier chiffre en gris dans irep.htm
 				classdat.innerHTML = "<b>"+ nbmes +"</b> mesures annuelles - Dernière année disponible : <b>" + an + "</b>";
-				graphique("Emissions annuelles de CO2", 'Quantité (kg/an)', '%Y', -1, 'm', false, 1, 'column', false, false);
+				graphique("Emissions annuelles de CO2", 'Quantité (kg/an)', '%Y', -1, 'm', false, 3, 'column', false, false);
 				document.getElementById("limit").style.display = 'none';
 
 			} else {
 				delayedAlert(0);
 				classdat.innerHTML = "Pas de mesure disponible";
-				graphique("Emissions annuelles de CO2", '', '%Y', -1, 'm', false, 1, 'column', false, false);
+				graphique("Emissions annuelles de CO2", '', '%Y', -1, 'm', false, 3, 'column', false, false);
 			}
 			dm.style.cursor = "default";
 			document.getElementById("search").style.cursor = "default";
