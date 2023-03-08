@@ -1,0 +1,27 @@
+{
+    "1": [
+			{"anneeemission": 2003, "max": 13600000},
+			{"anneeemission": 2004, "max": 15800000},
+			{"anneeemission": 2005, "max": 21600000},
+			{"anneeemission": 2006, "max": 18900000}
+	],	
+    "2": [
+			{"anneeemission": 2003, "max": 15100000},
+			{"anneeemission": 2004, "max": 20000000},
+			{"anneeemission": 2005, "max": 22800000},
+			{"anneeemission": 2006, "max": 19400000},
+			{"anneeemission": 2007, "max": 15300000},
+			{"anneeemission": 2008, "max": 14400000},
+			{"anneeemission": 2009, "max": 24500000},
+			{"anneeemission": 2010, "max": 19200000},
+			{"anneeemission": 2011, "max": 16100000},
+			{"anneeemission": 2012, "max": 13400000},
+			{"anneeemission": 2013, "max": 12300000},
+			{"anneeemission": 2014, "max": 15600000},
+			{"anneeemission": 2015, "max": 13600000},
+			{"anneeemission": 2016, "max": 14300000},
+			{"anneeemission": 2017, "max": 15100000},
+			{"anneeemission": 2018, "max": 11000000},
+			{"anneeemission": 2019, "max": 10000000}
+	]	
+}
